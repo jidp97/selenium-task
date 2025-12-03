@@ -15,6 +15,18 @@ Este programa monitorea constantemente la pantalla de tu emulador Android y dete
 - ✅ Contador de clics realizados
 - ✅ Fácil de pausar/detener (Ctrl+C)
 
+## 🍎 Compatibilidad con macOS
+
+**¡Sí, el bot funciona en Mac!** Pero requiere configuración adicional de permisos.
+
+Si estás en **macOS**, consulta la guía completa: **[MAC_SETUP.md](MAC_SETUP.md)**
+
+**Resumen rápido para Mac:**
+- Usa `python3` y `pip3` en lugar de `python` y `pip`
+- Debes dar permisos de **Accesibilidad** y **Grabación de Pantalla** a la Terminal
+- Emulador recomendado: **BlueStacks para Mac**
+- Ejecuta `python3 test_mac_setup.py` para verificar tu configuración
+
 ## 🔧 Requisitos
 
 ### Software Necesario
@@ -38,14 +50,19 @@ cd selenium-task
 
 ### 2. Instalar dependencias
 
+**En Windows:**
 ```bash
 pip install -r requirements.txt
 ```
 
-**Nota para Windows**: Si tienes problemas instalando opencv-python, prueba:
+**En macOS:**
 ```bash
-pip install opencv-python-headless
+pip3 install -r requirements.txt
 ```
+
+**Notas adicionales:**
+- **Windows**: Si tienes problemas con opencv-python, prueba: `pip install opencv-python-headless`
+- **macOS**: Consulta [MAC_SETUP.md](MAC_SETUP.md) para configuración de permisos (IMPORTANTE)
 
 ### 3. Configurar la imagen de referencia
 
@@ -82,8 +99,14 @@ selenium-task/
 1. **Abre tu emulador y el juego LastZ: Survival**
 2. **Ejecuta el bot:**
 
+**En Windows:**
 ```bash
 python game_event_bot.py
+```
+
+**En macOS:**
+```bash
+python3 game_event_bot.py
 ```
 
 3. **El bot te dará 5 segundos** para cambiar a la ventana del emulador
